@@ -9,6 +9,7 @@ public class Jogador {
 		if(time != null) {
 			System.out.println(time.getNome());
 		}
+		System.out.println("---#---");
 	}
 
 	public Jogador(String nome) {
