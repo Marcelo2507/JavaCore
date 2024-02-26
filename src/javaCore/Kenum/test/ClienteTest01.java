@@ -1,8 +1,8 @@
 package javaCore.Kenum.test;
 
 import javaCore.Kenum.domain.Cliente;
-import javaCore.Kenum.domain.Cliente.TipoPagamento;
 import javaCore.Kenum.domain.TipoCliente;
+import javaCore.Kenum.domain.TipoPagamento;
 
 public class ClienteTest01 {
 
@@ -14,5 +14,7 @@ public class ClienteTest01 {
 		System.out.println(cliente1);
 		System.out.println(cliente2);
 		
+		System.out.println(TipoPagamento.DEBITO.calcularDesconto(100));
+		System.out.println(TipoPagamento.CREDITO.calcularDesconto(100));
 	}
 }
