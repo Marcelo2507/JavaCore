@@ -5,15 +5,24 @@ public enum TipoCliente {
 	PESSOA_JURIDICA(2, "Pessoa Jurídica");
 	
 	public final int VALOR;
-	private String relatorio;
+	private String nomeRelatorio;
 	
-	TipoCliente(int valor, String relatorio){
+	TipoCliente(int valor, String nomeRelatorio){
 		this.VALOR = valor;
-		this.relatorio = relatorio;
+		this.nomeRelatorio = nomeRelatorio;
+	}
+	
+	public static TipoCliente tipoClientePorNomeRelatorio(String nomeRelatorio) {
+		for(TipoCliente tipoCliente: values()) {
+			if(tipoCliente.getNomeRelatorio().equals(nomeRelatorio)) {
+				return tipoCliente;
+			}
+		}
+		return null;
 	}
 
-	public String getRelatorio() {
-		return relatorio;
+	public String getNomeRelatorio() {
+		return nomeRelatorio;
 	}	
 	
 }

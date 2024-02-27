@@ -1,4 +1,5 @@
 package javaCore.Kenum.domain;
+
 public enum TipoPagamento{
 		DEBITO {
 			@Override
