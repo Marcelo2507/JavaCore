@@ -1,0 +1,16 @@
+package javaCore.QString.test;
+
+public class StringBuilderTest01 {
+	public static void main(String[] args) {
+		String nome = "Willian Suane";
+		nome.concat(" Devdojo");
+		System.out.println(nome);
+		
+		StringBuilder sb = new StringBuilder("Willian Suane");
+		sb.append(" DevDojo").append(" Academy");
+		sb.reverse();
+		sb.reverse();
+		sb.delete(0, 3);
+		System.out.println(sb);
+	}
+}
