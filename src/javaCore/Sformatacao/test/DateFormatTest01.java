@@ -1,4 +1,4 @@
-package javaCore.RDdates.test;
+package javaCore.Sformatacao.test;
 
 import java.text.DateFormat;
 import java.util.Calendar;
