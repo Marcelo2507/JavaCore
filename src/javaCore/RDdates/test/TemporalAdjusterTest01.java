@@ -9,6 +9,13 @@ import java.time.temporal.TemporalAdjuster;
 
 class ObterProximodiaUtil implements TemporalAdjuster {
 
+	
+	/**
+	 * REALIZA O RETORNO DA INFORMAÇÃO 
+	 * SE FOR DIA UTIL OU NÃO
+	 * FAZENDO A SOMA DOS DIAS QUE PRECISA 
+	 * PULAR CASO NÃO FOR DIA UTIL 
+	 * */
 	@Override
 	public Temporal adjustInto(Temporal temporal) {
 		DayOfWeek dayOfWeek = DayOfWeek.of(temporal.get(ChronoField.DAY_OF_WEEK));
