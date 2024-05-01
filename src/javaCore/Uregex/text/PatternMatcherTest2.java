@@ -12,9 +12,10 @@ public class PatternMatcherTest2 {
 		// \S = Todos os carácteres excluindos os brancos
 		// \w = Tudo o que for de a - z,A - Z, dígitos, _
 		// \W = Tudo o que NÃO for de a - z,A - Z, dígitos, _
-		String regex = "\\W";
+		// []
+		String regex = "0[xX][0-9a-fA-F]";
 //		String texto = "abaaba";
-		String texto2 = "jhrfh@$#%$ rygfyh2u4h¨¨3ht5h!@";
+		String texto2 = "12 0x 0x 0xFFABC 0x109 0x1";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(texto2);
 		System.out.println("Texto:  " + texto2);
@@ -27,6 +28,8 @@ public class PatternMatcherTest2 {
 		while(matcher.find()) {
 			System.out.print(matcher.start() + " " + matcher.group()+ "\n");
 		}
+		
+
 		
 	}
 
